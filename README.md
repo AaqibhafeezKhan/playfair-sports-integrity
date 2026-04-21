@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 
-![PlayFair Platform Preview](./assets/preview.png)
+![PlayFair Platform Preview](https://aaqibhafeezkhan.github.io/playfair-sports-integrity/)
 
 ## Features
 
