@@ -5,8 +5,9 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-
 ![PlayFair Platform Preview](./assets/preview.png)
+
+**[Live Preview](https://aaqibhafeezkhan.github.io/playfair-sports-integrity/)**
 
 ## Features
 
@@ -18,12 +19,12 @@
 
 ## Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| HTML5 | Semantic structure |
-| Tailwind CSS v2.2.19 | Utility-first styling |
-| Custom CSS | Animations & glass-morphism effects |
-| SVG Icons | Scalable vector graphics |
+| Technology           | Purpose                             |
+| -------------------- | ----------------------------------- |
+| HTML5                | Semantic structure                  |
+| Tailwind CSS v2.2.19 | Utility-first styling               |
+| Custom CSS           | Animations & glass-morphism effects |
+| SVG Icons            | Scalable vector graphics            |
 
 ## Quick Start
 
@@ -42,12 +43,12 @@ Or simply open `index.html` directly in any modern browser.
 
 ## Sections
 
-| Section | Description |
-|---------|-------------|
-| **Navigation** | Fixed glass-morphism navbar with smooth hover effects |
-| **Hero** | Gradient background with animated headline and CTA |
-| **Features** | Three-card grid highlighting Programs, Resources, and Contact |
-| **Footer** | Multi-column layout with links and contact info |
+| Section        | Description                                                   |
+| -------------- | ------------------------------------------------------------- |
+| **Navigation** | Fixed glass-morphism navbar with smooth hover effects         |
+| **Hero**       | Gradient background with animated headline and CTA            |
+| **Features**   | Three-card grid highlighting Programs, Resources, and Contact |
+| **Footer**     | Multi-column layout with links and contact info               |
 
 ## Animations Included
 

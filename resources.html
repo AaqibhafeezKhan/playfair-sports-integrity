@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - PlayFair</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
+        .resource-icon {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #60A5FA;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        .tag {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed w-full z-50 text-white hero-gradient shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-blue-900 font-bold text-lg">P</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">PlayFair</span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="index.html" class="nav-link px-3 py-2 text-white text-sm">Home</a>
+                        <a href="programs.html" class="nav-link px-3 py-2 text-white text-sm">Programs</a>
+                        <a href="resources.html" class="nav-link px-3 py-2 text-white text-sm">Resources</a>
+                        <a href="about.html" class="nav-link px-3 py-2 text-white text-sm">About</a>
+                        <a href="contact.html" class="nav-link px-3 py-2 text-white text-sm">Contact</a>
+                    </div>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 w-64 h-screen bg-gray-900 shadow-xl md:hidden">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="index.html" class="text-white hover:text-blue-400 transition-colors py-2">Home</a>
+                <a href="programs.html" class="text-white hover:text-blue-400 transition-colors py-2">Programs</a>
+                <a href="resources.html" class="text-white hover:text-blue-400 transition-colors py-2">Resources</a>
+                <a href="about.html" class="text-white hover:text-blue-400 transition-colors py-2">About</a>
+                <a href="contact.html" class="text-white hover:text-blue-400 transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-gradient text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-fade-in">
+                <span class="text-blue-300 font-semibold text-sm tracking-wide uppercase">Knowledge Hub</span>
+                <h1 class="text-4xl sm:text-5xl font-bold mt-4 mb-6">Training Resources</h1>
+                <p class="text-xl text-gray-200 max-w-2xl mx-auto">Access our comprehensive library of guides, tools, and materials to support integrity education.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="mb-12">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-medium">All Resources</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">Guides</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">Videos</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">Templates</button>
+                <button class="px-6 py-2 bg-white text-gray-700 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors">Research</button>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card-gradient rounded-2xl p-6 card-hover border border-gray-100">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="resource-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <span class="tag px-3 py-1 rounded-full text-xs font-medium text-blue-700">Guide</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Athlete Handbook</h3>
+                <p class="text-gray-600 text-sm mb-4">Complete guide for athletes on maintaining integrity in competitive sports.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors">
+                    Download PDF
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="card-gradient rounded-2xl p-6 card-hover border border-gray-100">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="resource-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <span class="tag px-3 py-1 rounded-full text-xs font-medium text-blue-700">Video</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Ethics Training Series</h3>
+                <p class="text-gray-600 text-sm mb-4">Video modules covering real-world scenarios and ethical decision-making.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors">
+                    Watch Now
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="card-gradient rounded-2xl p-6 card-hover border border-gray-100">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="resource-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </div>
+                    <span class="tag px-3 py-1 rounded-full text-xs font-medium text-blue-700">Template</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Policy Framework</h3>
+                <p class="text-gray-600 text-sm mb-4">Customizable policy templates for sports organizations.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors">
+                    Download DOC
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="card-gradient rounded-2xl p-6 card-hover border border-gray-100">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="resource-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <span class="tag px-3 py-1 rounded-full text-xs font-medium text-blue-700">Research</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">2025 Integrity Report</h3>
+                <p class="text-gray-600 text-sm mb-4">Annual research on integrity trends and best practices globally.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors">
+                    Read Report
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="card-gradient rounded-2xl p-6 card-hover border border-gray-100">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="resource-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <span class="tag px-3 py-1 rounded-full text-xs font-medium text-blue-700">Guide</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Parent Guide</h3>
+                <p class="text-gray-600 text-sm mb-4">How parents can support integrity education for young athletes.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors">
+                    Download PDF
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="card-gradient rounded-2xl p-6 card-hover border border-gray-100">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="resource-icon w-12 h-12 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span class="tag px-3 py-1 rounded-full text-xs font-medium text-blue-700">Tool</span>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Event Checklist</h3>
+                <p class="text-gray-600 text-sm mb-4">Pre-competition integrity checklist for athletes and officials.</p>
+                <a href="#" class="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors">
+                    Download PDF
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                            <span class="text-blue-900 font-bold text-lg">P</span>
+                        </div>
+                        <span class="text-xl font-bold">PlayFair</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">Building a culture of integrity in sports through world-class education.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Solutions</h4>
+                    <ul class="space-y-3">
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors text-sm">Programs</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition-colors text-sm">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-sm">Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2026 PlayFair. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

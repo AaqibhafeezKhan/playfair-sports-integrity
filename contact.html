@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - PlayFair</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+        }
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #60A5FA;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        .contact-icon {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed w-full z-50 text-white hero-gradient shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-blue-900 font-bold text-lg">P</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">PlayFair</span>
+                </a>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="index.html" class="nav-link px-3 py-2 text-white text-sm">Home</a>
+                        <a href="programs.html" class="nav-link px-3 py-2 text-white text-sm">Programs</a>
+                        <a href="resources.html" class="nav-link px-3 py-2 text-white text-sm">Resources</a>
+                        <a href="about.html" class="nav-link px-3 py-2 text-white text-sm">About</a>
+                        <a href="contact.html" class="nav-link px-3 py-2 text-white text-sm">Contact</a>
+                    </div>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 w-64 h-screen bg-gray-900 shadow-xl md:hidden">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="index.html" class="text-white hover:text-blue-400 transition-colors py-2">Home</a>
+                <a href="programs.html" class="text-white hover:text-blue-400 transition-colors py-2">Programs</a>
+                <a href="resources.html" class="text-white hover:text-blue-400 transition-colors py-2">Resources</a>
+                <a href="about.html" class="text-white hover:text-blue-400 transition-colors py-2">About</a>
+                <a href="contact.html" class="text-white hover:text-blue-400 transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-gradient text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-fade-in">
+                <span class="text-blue-300 font-semibold text-sm tracking-wide uppercase">Get In Touch</span>
+                <h1 class="text-4xl sm:text-5xl font-bold mt-4 mb-6">Contact Us</h1>
+                <p class="text-xl text-gray-200 max-w-2xl mx-auto">Have questions about our programs? We're here to help you build a culture of integrity.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="card-gradient rounded-2xl p-8 border border-gray-100 text-center">
+                <div class="contact-icon w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Email Us</h3>
+                <p class="text-gray-600 text-sm mb-4">For general inquiries and program information</p>
+                <a href="mailto:info@playfair.org" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">info@playfair.org</a>
+            </div>
+            <div class="card-gradient rounded-2xl p-8 border border-gray-100 text-center">
+                <div class="contact-icon w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Call Us</h3>
+                <p class="text-gray-600 text-sm mb-4">Mon-Fri from 8am to 6pm GMT</p>
+                <a href="tel:+441234567890" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">+44 123 456 7890</a>
+            </div>
+            <div class="card-gradient rounded-2xl p-8 border border-gray-100 text-center">
+                <div class="contact-icon w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">Visit Us</h3>
+                <p class="text-gray-600 text-sm mb-4">Our headquarters in London</p>
+                <span class="text-blue-600 font-semibold">123 Sports Street, London</span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="card-gradient rounded-2xl p-8 border border-gray-100">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                            <input type="text" class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:outline-none" placeholder="John" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                            <input type="text" class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:outline-none" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:outline-none" placeholder="john@example.com" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Organization</label>
+                        <input type="text" class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:outline-none" placeholder="Your sports organization">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                        <select class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:outline-none">
+                            <option>General Inquiry</option>
+                            <option>Program Enrollment</option>
+                            <option>Partnership Opportunity</option>
+                            <option>Media Request</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea rows="4" class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-500 focus:outline-none" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div class="card-gradient rounded-xl p-6 border border-gray-100">
+                        <h3 class="font-semibold text-gray-900 mb-2">How long are your programs?</h3>
+                        <p class="text-gray-600 text-sm">Our programs range from 4-hour intensive workshops to 12-week comprehensive courses. Custom programs can be tailored to your needs.</p>
+                    </div>
+                    <div class="card-gradient rounded-xl p-6 border border-gray-100">
+                        <h3 class="font-semibold text-gray-900 mb-2">Do you offer online training?</h3>
+                        <p class="text-gray-600 text-sm">Yes! Many of our programs are available online with live instruction, recorded modules, and interactive assessments.</p>
+                    </div>
+                    <div class="card-gradient rounded-xl p-6 border border-gray-100">
+                        <h3 class="font-semibold text-gray-900 mb-2">Can you customize for our organization?</h3>
+                        <p class="text-gray-600 text-sm">Absolutely. We work with organizations to develop custom curricula that address specific challenges and goals.</p>
+                    </div>
+                    <div class="card-gradient rounded-xl p-6 border border-gray-100">
+                        <h3 class="font-semibold text-gray-900 mb-2">Do you offer certifications?</h3>
+                        <p class="text-gray-600 text-sm">Yes, participants who complete our programs receive recognized certificates that demonstrate their commitment to integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                            <span class="text-blue-900 font-bold text-lg">P</span>
+                        </div>
+                        <span class="text-xl font-bold">PlayFair</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">Building a culture of integrity in sports through world-class education.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Solutions</h4>
+                    <ul class="space-y-3">
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white transition-colors text-sm">Programs</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-white transition-colors text-sm">Resources</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-sm">Consulting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-gray-300 mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">&copy; 2026 PlayFair. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
